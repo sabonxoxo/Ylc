@@ -63,7 +63,7 @@ const podcasts = [
   {
     id: 3,
     title: "Peer Pressure at Pakikisama: Paano Mag-navigate?",
-    description: "Tatlong YFC leaders ang nagbahagi ng kanilang karanasan at mga leksyon sa pakikipagkaibigan.",
+    description: "Tatlong YLC leaders ang nagbahagi ng kanilang karanasan at mga leksyon sa pakikipagkaibigan.",
     type: "Podcast",
     duration: "44 min",
     date: "Mayo 19, 2024",
@@ -95,7 +95,7 @@ const videos = [
   },
   {
     id: 2,
-    title: "YFC Leaders Panel: Sinasagot ang Inyong mga Tanong",
+    title: "YLC Leaders Panel: Sinasagot ang Inyong mga Tanong",
     thumb: "https://images.unsplash.com/photo-1780404869811-88e3b863a217?w=480&h=270&fit=crop&auto=format",
     duration: "28:10",
     date: "Mayo 31, 2024",

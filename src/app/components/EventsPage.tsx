@@ -1,16 +1,25 @@
 import { useState } from "react";
-import { Calendar, MapPin, Users, Clock, ChevronRight, ArrowRight, Check } from "lucide-react";
+import {
+  Calendar,
+  MapPin,
+  Users,
+  Clock,
+  ChevronRight,
+  ArrowRight,
+  Check,
+} from "lucide-react";
 
 const events = [
   {
     id: 1,
     type: "Camp",
-    title: "YFC Summer Breakaway Camp",
+    title: "YLC Summer Breakaway Camp",
     tagline: "Tatlong araw. Isang bundok. Walang phone.",
     description:
       "A 3-day overnight camp experience set in the mountains of Lanao del Norte. Expect worship nights, campfire devotions, team challenges, and honest small group conversations. Limited slots — secure yours now.",
     date: "July 18–20, 2024",
-    location: "Kapatagan, Lanao del Norte, Philippines",
+    location:
+      "Kapatagan, Digos City, Davao del Sur, Philippines",
     time: "Depart 8:00 AM",
     capacity: 60,
     spotsLeft: 14,
@@ -25,9 +34,10 @@ const events = [
     title: "Friday Night Live — July",
     tagline: "Your weekly highlight.",
     description:
-      "Every Friday night at the YFC hall — worship, games, a real talk, and time to hang with your people. No registration needed. Just come as you are.",
+      "Every Friday night at our church — worship, games, a real talk, and time to hang with your people. No registration needed. Just come as you are.",
     date: "Every Friday",
-    location: "YFC Hall, Rizal, Kapatagan, Lanao del Norte",
+    location:
+      "Yedang Foursquare Gospel Church, Kapatagan, Digos City, Davao del Sur",
     time: "7:00 – 9:30 PM (PHT)",
     capacity: 120,
     spotsLeft: null,
@@ -61,14 +71,18 @@ const events = [
     description:
       "We partner with local barangay officials and community groups for a full morning of service — coastal clean-up, feeding program, and visitation of the elderly. Tanghalian ay aming sagot.",
     date: "July 27, 2024",
-    location: "Kapatagan, Lanao del Norte",
+    location: "Kapatagan, Digos City Davao del Sur",
     time: "8:00 AM – 2:00 PM (PHT)",
     capacity: 80,
     spotsLeft: 31,
     price: "Libre",
     img: "https://images.unsplash.com/photo-1758599669406-d5179ccefcb9?w=600&h=380&fit=crop&auto=format",
     accentColor: "#C4A882",
-    tags: ["Serbisyo", "Lahat ng Edad", "Kasama ang Tanghalian"],
+    tags: [
+      "Serbisyo",
+      "Lahat ng Edad",
+      "Kasama ang Tanghalian",
+    ],
   },
 ];
 
@@ -77,7 +91,8 @@ const volunteerTeams = [
     id: 1,
     name: "Tech & Media",
     icon: "🎬",
-    description: "Run lights, sound, livestream, and social media. If tech is your thing, we need you.",
+    description:
+      "Run lights, sound, livestream, and social media. If tech is your thing, we need you.",
     commitment: "Biyernes + 2 hrs/buwan produksyon",
     openRoles: 3,
     color: "#7B8EAD",
@@ -86,7 +101,8 @@ const volunteerTeams = [
     id: 2,
     name: "Hospitality Crew",
     icon: "🤝",
-    description: "First impressions matter. You're the reason someone feels welcome the moment they walk in.",
+    description:
+      "First impressions matter. You're the reason someone feels welcome the moment they walk in.",
     commitment: "Biyernes, 6:00–9:30 PM (PHT)",
     openRoles: 5,
     color: "#8FA89B",
@@ -95,7 +111,8 @@ const volunteerTeams = [
     id: 3,
     name: "Worship Team",
     icon: "🎸",
-    description: "Musicians, vocalists, and sound engineers who want to lead something meaningful.",
+    description:
+      "Musicians, vocalists, and sound engineers who want to lead something meaningful.",
     commitment: "Huwebes rehearsal + Biyernes gabi",
     openRoles: 2,
     color: "#D98A72",
@@ -104,7 +121,8 @@ const volunteerTeams = [
     id: 4,
     name: "Small Group Leaders",
     icon: "💬",
-    description: "Facilitate real conversations in a small group of 6–8 teens. No seminary required.",
+    description:
+      "Facilitate real conversations in a small group of 6–8 teens. No seminary required.",
     commitment: "Biyernes + buwanang leader training",
     openRoles: 6,
     color: "#C4A882",
@@ -112,8 +130,12 @@ const volunteerTeams = [
 ];
 
 export function EventsPage() {
-  const [registeredEvents, setRegisteredEvents] = useState<Set<number>>(new Set());
-  const [appliedTeams, setAppliedTeams] = useState<Set<number>>(new Set());
+  const [registeredEvents, setRegisteredEvents] = useState<
+    Set<number>
+  >(new Set());
+  const [appliedTeams, setAppliedTeams] = useState<Set<number>>(
+    new Set(),
+  );
 
   const toggleEvent = (id: number) => {
     setRegisteredEvents((prev) => {
@@ -137,14 +159,18 @@ export function EventsPage() {
       <section
         className="border-b"
         style={{
-          background: "linear-gradient(135deg, #F5F1EB 0%, #FDFBF7 100%)",
+          background:
+            "linear-gradient(135deg, #F5F1EB 0%, #FDFBF7 100%)",
           borderColor: "rgba(74,85,104,0.08)",
           paddingTop: "4rem",
           paddingBottom: "4rem",
         }}
       >
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#D98A72" }}>
+          <p
+            className="text-xs font-semibold uppercase tracking-widest mb-2"
+            style={{ color: "#D98A72" }}
+          >
             Events & Launchpad
           </p>
           <h1
@@ -158,8 +184,15 @@ export function EventsPage() {
           >
             What's Happening
           </h1>
-          <p style={{ color: "#8A96A8", fontSize: "1rem", maxWidth: "500px" }}>
-            Sign up for events, join a volunteer team, and find your place in the community.
+          <p
+            style={{
+              color: "#8A96A8",
+              fontSize: "1rem",
+              maxWidth: "500px",
+            }}
+          >
+            Sign up for events, join a volunteer team, and find
+            your place in the community.
           </p>
         </div>
       </section>
@@ -168,12 +201,21 @@ export function EventsPage() {
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex items-center gap-2 mb-2">
           <Calendar size={15} style={{ color: "#D98A72" }} />
-          <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#D98A72" }}>
+          <p
+            className="text-xs font-semibold uppercase tracking-widest"
+            style={{ color: "#D98A72" }}
+          >
             Upcoming Events
           </p>
         </div>
         <h2
-          style={{ color: "#2D3748", fontWeight: 800, fontSize: "1.5rem", letterSpacing: "-0.02em", marginBottom: "1.75rem" }}
+          style={{
+            color: "#2D3748",
+            fontWeight: 800,
+            fontSize: "1.5rem",
+            letterSpacing: "-0.02em",
+            marginBottom: "1.75rem",
+          }}
         >
           Make a Plan
         </h2>
@@ -182,7 +224,11 @@ export function EventsPage() {
           {events.map((event) => {
             const registered = registeredEvents.has(event.id);
             const spotsPercent = event.spotsLeft
-              ? Math.round(((event.capacity - event.spotsLeft) / event.capacity) * 100)
+              ? Math.round(
+                  ((event.capacity - event.spotsLeft) /
+                    event.capacity) *
+                    100,
+                )
               : null;
             return (
               <div
@@ -207,7 +253,10 @@ export function EventsPage() {
                   />
                   <span
                     className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold"
-                    style={{ background: event.accentColor, color: "#FDFBF7" }}
+                    style={{
+                      background: event.accentColor,
+                      color: "#FDFBF7",
+                    }}
                   >
                     {event.type}
                   </span>
@@ -221,32 +270,68 @@ export function EventsPage() {
                         <span
                           key={tag}
                           className="px-2.5 py-0.5 rounded-full text-xs font-medium"
-                          style={{ background: `${event.accentColor}18`, color: event.accentColor }}
+                          style={{
+                            background: `${event.accentColor}18`,
+                            color: event.accentColor,
+                          }}
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
                     <h3
-                      style={{ color: "#2D3748", fontWeight: 800, fontSize: "1.2rem", letterSpacing: "-0.02em", marginBottom: "0.2rem" }}
+                      style={{
+                        color: "#2D3748",
+                        fontWeight: 800,
+                        fontSize: "1.2rem",
+                        letterSpacing: "-0.02em",
+                        marginBottom: "0.2rem",
+                      }}
                     >
                       {event.title}
                     </h3>
-                    <p style={{ color: event.accentColor, fontWeight: 600, fontSize: "0.85rem", marginBottom: "0.75rem" }}>
+                    <p
+                      style={{
+                        color: event.accentColor,
+                        fontWeight: 600,
+                        fontSize: "0.85rem",
+                        marginBottom: "0.75rem",
+                      }}
+                    >
                       {event.tagline}
                     </p>
-                    <p style={{ color: "#8A96A8", fontSize: "0.875rem", lineHeight: 1.6, marginBottom: "1.25rem" }}>
+                    <p
+                      style={{
+                        color: "#8A96A8",
+                        fontSize: "0.875rem",
+                        lineHeight: 1.6,
+                        marginBottom: "1.25rem",
+                      }}
+                    >
                       {event.description}
                     </p>
 
                     {/* Meta */}
                     <div className="flex flex-wrap gap-x-5 gap-y-2 mb-4">
                       {[
-                        { icon: <Calendar size={13} />, text: event.date },
-                        { icon: <Clock size={13} />, text: event.time },
-                        { icon: <MapPin size={13} />, text: event.location },
+                        {
+                          icon: <Calendar size={13} />,
+                          text: event.date,
+                        },
+                        {
+                          icon: <Clock size={13} />,
+                          text: event.time,
+                        },
+                        {
+                          icon: <MapPin size={13} />,
+                          text: event.location,
+                        },
                       ].map((m) => (
-                        <div key={m.text} className="flex items-center gap-1.5 text-xs" style={{ color: "#8A96A8" }}>
+                        <div
+                          key={m.text}
+                          className="flex items-center gap-1.5 text-xs"
+                          style={{ color: "#8A96A8" }}
+                        >
                           {m.icon} {m.text}
                         </div>
                       ))}
@@ -256,18 +341,37 @@ export function EventsPage() {
                     {spotsPercent !== null && (
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-1.5">
-                          <p className="text-xs" style={{ color: "#8A96A8" }}>
-                            <Users size={11} className="inline mr-1" />
-                            {event.spotsLeft} spots remaining of {event.capacity}
+                          <p
+                            className="text-xs"
+                            style={{ color: "#8A96A8" }}
+                          >
+                            <Users
+                              size={11}
+                              className="inline mr-1"
+                            />
+                            {event.spotsLeft} spots remaining of{" "}
+                            {event.capacity}
                           </p>
-                          <p className="text-xs font-semibold" style={{ color: event.accentColor }}>
+                          <p
+                            className="text-xs font-semibold"
+                            style={{ color: event.accentColor }}
+                          >
                             {spotsPercent}% full
                           </p>
                         </div>
-                        <div className="rounded-full overflow-hidden" style={{ height: "5px", background: "rgba(74,85,104,0.1)" }}>
+                        <div
+                          className="rounded-full overflow-hidden"
+                          style={{
+                            height: "5px",
+                            background: "rgba(74,85,104,0.1)",
+                          }}
+                        >
                           <div
                             className="h-full rounded-full transition-all duration-500"
-                            style={{ width: `${spotsPercent}%`, background: event.accentColor }}
+                            style={{
+                              width: `${spotsPercent}%`,
+                              background: event.accentColor,
+                            }}
                           />
                         </div>
                       </div>
@@ -277,16 +381,37 @@ export function EventsPage() {
                   {/* Footer */}
                   <div className="flex items-center justify-between gap-4">
                     <div>
-                      <p className="text-xs" style={{ color: "#8A96A8" }}>Cost</p>
-                      <p style={{ color: "#2D3748", fontWeight: 700, fontSize: "1.1rem" }}>{event.price}</p>
+                      <p
+                        className="text-xs"
+                        style={{ color: "#8A96A8" }}
+                      >
+                        Cost
+                      </p>
+                      <p
+                        style={{
+                          color: "#2D3748",
+                          fontWeight: 700,
+                          fontSize: "1.1rem",
+                        }}
+                      >
+                        {event.price}
+                      </p>
                     </div>
                     <button
                       onClick={() => toggleEvent(event.id)}
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-90 active:scale-95"
                       style={
                         registered
-                          ? { background: "rgba(143,168,155,0.15)", color: "#8FA89B", border: "1.5px solid #8FA89B" }
-                          : { background: event.accentColor, color: "#FDFBF7" }
+                          ? {
+                              background:
+                                "rgba(143,168,155,0.15)",
+                              color: "#8FA89B",
+                              border: "1.5px solid #8FA89B",
+                            }
+                          : {
+                              background: event.accentColor,
+                              color: "#FDFBF7",
+                            }
                       }
                     >
                       {registered ? (
@@ -312,17 +437,34 @@ export function EventsPage() {
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="flex items-center gap-2 mb-2">
             <Users size={15} style={{ color: "#8FA89B" }} />
-            <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#8FA89B" }}>
+            <p
+              className="text-xs font-semibold uppercase tracking-widest"
+              style={{ color: "#8FA89B" }}
+            >
               Volunteer Launchpad
             </p>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
             <div>
-              <h2 style={{ color: "#2D3748", fontWeight: 800, fontSize: "1.5rem", letterSpacing: "-0.02em" }}>
+              <h2
+                style={{
+                  color: "#2D3748",
+                  fontWeight: 800,
+                  fontSize: "1.5rem",
+                  letterSpacing: "-0.02em",
+                }}
+              >
                 Join a Team
               </h2>
-              <p style={{ color: "#8A96A8", fontSize: "0.9rem", marginTop: "0.35rem" }}>
-                No experience required — just a willingness to show up consistently.
+              <p
+                style={{
+                  color: "#8A96A8",
+                  fontSize: "0.9rem",
+                  marginTop: "0.35rem",
+                }}
+              >
+                No experience required — just a willingness to
+                show up consistently.
               </p>
             </div>
           </div>
@@ -337,33 +479,64 @@ export function EventsPage() {
                   style={{
                     background: "#FDFBF7",
                     border: "1px solid rgba(74,85,104,0.06)",
-                    boxShadow: "0 2px 12px rgba(74,85,104,0.07)",
+                    boxShadow:
+                      "0 2px 12px rgba(74,85,104,0.07)",
                   }}
                 >
                   <div className="flex items-start justify-between">
                     <div>
-                      <span style={{ fontSize: "1.75rem", lineHeight: 1 }}>{team.icon}</span>
+                      <span
+                        style={{
+                          fontSize: "1.75rem",
+                          lineHeight: 1,
+                        }}
+                      >
+                        {team.icon}
+                      </span>
                       <h3
-                        style={{ color: "#2D3748", fontWeight: 700, fontSize: "1.05rem", marginTop: "0.6rem", marginBottom: "0.25rem" }}
+                        style={{
+                          color: "#2D3748",
+                          fontWeight: 700,
+                          fontSize: "1.05rem",
+                          marginTop: "0.6rem",
+                          marginBottom: "0.25rem",
+                        }}
                       >
                         {team.name}
                       </h3>
                     </div>
                     <span
                       className="px-2.5 py-1 rounded-full text-xs font-semibold"
-                      style={{ background: `${team.color}18`, color: team.color }}
+                      style={{
+                        background: `${team.color}18`,
+                        color: team.color,
+                      }}
                     >
                       {team.openRoles} open
                     </span>
                   </div>
 
-                  <p style={{ color: "#8A96A8", fontSize: "0.875rem", lineHeight: 1.6 }}>{team.description}</p>
+                  <p
+                    style={{
+                      color: "#8A96A8",
+                      fontSize: "0.875rem",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    {team.description}
+                  </p>
 
                   <div
                     className="flex items-center gap-2 px-3 py-2 rounded-xl text-xs"
-                    style={{ background: "#F5F1EB", color: "#8A96A8" }}
+                    style={{
+                      background: "#F5F1EB",
+                      color: "#8A96A8",
+                    }}
                   >
-                    <Clock size={12} style={{ color: team.color }} />
+                    <Clock
+                      size={12}
+                      style={{ color: team.color }}
+                    />
                     {team.commitment}
                   </div>
 
@@ -372,13 +545,22 @@ export function EventsPage() {
                     className="w-full py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 hover:opacity-90 active:scale-95"
                     style={
                       applied
-                        ? { background: "rgba(143,168,155,0.15)", color: "#8FA89B", border: "1.5px solid #8FA89B" }
-                        : { background: team.color, color: "#FDFBF7" }
+                        ? {
+                            background:
+                              "rgba(143,168,155,0.15)",
+                            color: "#8FA89B",
+                            border: "1.5px solid #8FA89B",
+                          }
+                        : {
+                            background: team.color,
+                            color: "#FDFBF7",
+                          }
                     }
                   >
                     {applied ? (
                       <>
-                        <Check size={14} /> Applied — We'll be in touch
+                        <Check size={14} /> Applied — We'll be
+                        in touch
                       </>
                     ) : (
                       <>
@@ -395,23 +577,41 @@ export function EventsPage() {
           <div
             className="mt-8 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6"
             style={{
-              background: "linear-gradient(135deg, #D98A72 0%, #C4784A 100%)",
+              background:
+                "linear-gradient(135deg, #D98A72 0%, #C4784A 100%)",
             }}
           >
             <div>
-              <h3 style={{ color: "#FDFBF7", fontWeight: 800, fontSize: "1.25rem", letterSpacing: "-0.02em", marginBottom: "0.3rem" }}>
+              <h3
+                style={{
+                  color: "#FDFBF7",
+                  fontWeight: 800,
+                  fontSize: "1.25rem",
+                  letterSpacing: "-0.02em",
+                  marginBottom: "0.3rem",
+                }}
+              >
                 Not sure where you fit?
               </h3>
-              <p style={{ color: "rgba(253,251,247,0.8)", fontSize: "0.875rem" }}>
-                Pumunta sa Friday Night namin sa Rizal, Kapatagan. Walang pressure — just show up.
+              <p
+                style={{
+                  color: "rgba(253,251,247,0.8)",
+                  fontSize: "0.875rem",
+                }}
+              >
+                Pumunta sa Friday Night namin sa Rizal,
+                Kapatagan. Walang pressure — just show up.
               </p>
             </div>
             <a
               href="https://www.facebook.com/KFGCYouthLifeCheck"
-            target="_blank"
-            rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold flex-shrink-0 transition-all hover:gap-3 hover:opacity-90"
-              style={{ background: "#FDFBF7", color: "#D98A72" }}
+              style={{
+                background: "#FDFBF7",
+                color: "#D98A72",
+              }}
             >
               Reach Us on Facebook <ArrowRight size={14} />
             </a>

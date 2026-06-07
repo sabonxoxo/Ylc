@@ -109,7 +109,7 @@ export function HomePage() {
               <span style={{ color: "#D98A72" }}>together.</span>
             </h1>
             <p className="mb-8 leading-relaxed max-w-sm" style={{ color: "#4A5568", fontSize: "1.05rem" }}>
-              YFC — Youth Life Check — is a community of life checkers, soul winners, and worshippers who show up for each other and for something bigger.
+              YLC — Youth Life Check — is a community of life checkers, soul winners, and worshippers who show up for each other and for something bigger.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link

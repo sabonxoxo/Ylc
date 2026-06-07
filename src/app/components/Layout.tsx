@@ -24,11 +24,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
               className="w-8 h-8 rounded-full flex items-center justify-center"
               style={{ background: "linear-gradient(135deg, #8FA89B 0%, #D98A72 100%)" }}
             >
-              <span style={{ color: "#FDFBF7", fontSize: "0.6rem", fontWeight: 800, letterSpacing: "-0.02em" }}>YFC</span>
+              <span style={{ color: "#FDFBF7", fontSize: "0.6rem", fontWeight: 800, letterSpacing: "-0.02em" }}>YLC</span>
             </div>
             <div>
               <span style={{ color: "#4A5568", fontWeight: 700, fontSize: "1.05rem", letterSpacing: "-0.01em" }}>
-                YFC
+                YLC
               </span>
               <span style={{ color: "#8A96A8", fontWeight: 400, fontSize: "0.75rem", marginLeft: "6px" }}>Youth Life Check</span>
             </div>
@@ -123,10 +123,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   className="w-7 h-7 rounded-full flex items-center justify-center"
                   style={{ background: "linear-gradient(135deg, #8FA89B 0%, #D98A72 100%)" }}
                 >
-                  <span style={{ color: "#FDFBF7", fontSize: "0.5rem", fontWeight: 800, letterSpacing: "-0.02em" }}>YFC</span>
+                  <span style={{ color: "#FDFBF7", fontSize: "0.5rem", fontWeight: 800, letterSpacing: "-0.02em" }}>YLC</span>
                 </div>
                 <div>
-                <span style={{ color: "#4A5568", fontWeight: 700, fontSize: "0.95rem" }}>YFC</span>
+                <span style={{ color: "#4A5568", fontWeight: 700, fontSize: "0.95rem" }}>YLC</span>
                 <span style={{ color: "#8A96A8", fontWeight: 400, fontSize: "0.7rem", marginLeft: "5px" }}>Youth Life Check</span>
               </div>
               </div>
@@ -170,7 +170,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           <div className="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3" style={{ borderColor: "rgba(74,85,104,0.10)" }}>
-            <p className="text-xs" style={{ color: "#8A96A8" }}>© 2024 YFC · Youth Life Check · Rizal, Kapatagan, Philippines. All rights reserved.</p>
+            <p className="text-xs" style={{ color: "#8A96A8" }}>© 2024 YLC · Youth Life Check · Rizal, Kapatagan, Philippines. All rights reserved.</p>
             <p className="text-xs flex items-center gap-1" style={{ color: "#8A96A8" }}>
               Made with <Heart size={11} style={{ color: "#D98A72" }} fill="#D98A72" /> for the next generation
             </p>
